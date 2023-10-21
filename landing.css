@@ -1,0 +1,114 @@
+.head{
+    font-size: 30px;
+    height:300px;
+    width:100%;
+    background-size: 50%;
+    color:whitesmoke;
+
+}
+.h3{
+    font-family: system-ui;
+}
+body{
+    background-image:url(pexels-mark-stebnicki-2255920.jpg) ;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
+    height:70%;
+    width:90%;
+}
+
+header{
+    font-family:sans-serif;
+    font-style: bold;
+}
+
+.about{
+    padding: 30px;
+
+}
+nav{
+    height: 80%;
+    width: 70%;
+    text-align: center;
+    display:flex;
+    border-radius: 100px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 200px;
+    font-size: 13px;
+}
+nav{
+    background-color: darkgrey;
+    height:50%;
+    width:90%;
+    padding:10px;
+    
+}
+#location{
+    background-color: burlywood;
+    height:80px;
+    padding:20px;
+    border-radius: 100px;
+}
+.top1{
+    background-color: burlywood;
+    display:flex;
+    justify-content:space-around;
+    height:60px;
+    padding-top: 10px;
+    text-decoration: none;
+    width:100%;
+    border-radius: 100px;
+
+}
+.about-us{
+    background-color: seagreen;
+    border-radius: 100px;
+    padding-top:10px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+    position:absolute;
+    top:250px;
+
+
+}
+.top2{
+    background-color: burlywood;
+    height:60px;
+    display:flex;
+    justify-content: space-around;
+    padding-left:20px;
+    padding-right:20px;
+    font-family:'Times New Roman', Times, serif ;
+    font-weight: bold;
+    font-size:20px;
+    border-radius: 100px;
+    padding-bottom: 10px;
+    padding-left:5px;
+    padding-right: 5px;
+}
+
+.fa-facebook{
+    color:blue;
+}
+#contact3{
+    font-size:40px;
+    display:inline-block;
+    overflow:hidden;
+    text-decoration: none;    
+}      
+#contact1{
+    text-decoration: none;
+}
+#contact2{
+    font-size:40px;
+    color:white;
+    text-decoration: none;
+
+}
+#contact4{
+    font-size:40px;
+    color:lightblue;
+    text-decoration: none;
+}
