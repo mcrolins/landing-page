@@ -1,114 +1,120 @@
-.head{
-    font-size: 30px;
-    height:300px;
-    width:100%;
-    background-size: 50%;
-    color:whitesmoke;
-
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-.h3{
-    font-family: system-ui;
+:root{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --color-1:burlywood;
+    --color-2:seagreen;
+    --color-3:darkgrey; 
+}
+
+.main{
+  background-image:url(pexels-mark-stebnicki-2255920.jpg) ;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center;
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.menu-bar{
+   background-color: var(--color-1);
+   display:flex;
+   flex-direction: row;
+   align-items:center;
+   justify-content: space-between;
+   width:100%;
+   padding: 20px;
+   z-index: 1;
+   margin-right: 0;
+   
+}
+
+.about-us{
+  background-color: var(--color-2);
+  padding: 20px; 
+  margin: 20px 5px 20px 5px; 
+  z-index:3;
+  height:40%;
+  width:100%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom:150px;
+  box-shadow: black;
+}
+
+nav{
+  display: flex;
+  flex-direction: row;
+  background-color: transparent;
+  padding:20px 5px 20px 5px;
+  width:100%;
+  flex-wrap:nowrap;
+  
+  
+}
+.about{
+  background-color: var(--color-3);
+  box-shadow:5px 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 5px;
+  border-radius: 15px;
+  margin-right: 5px;
+  width: fit-content;
+  transition: transform 0.3s ease-in-out;
+}
+.about:hover{
+transform: scale(1.08);
+}
+
+.location{
+  background-color: var(--color-2);
+  padding: 20px;
+  border-radius: 15px;
+  margin:20px 5px 10px 20px;
+  ;
+}
+
+.socials-bar{
+  background-color: var(--color-1);
+  padding: 20px;
+  display:flex;
+  flex-direction: row;
+  align-items:center;
+  justify-content: space-between;
+  width:100%;
+}
+span{
+  font-size: larger;
+}
+
+button{
+  border-radius: 30px;
+  padding: 20px;
+  border: 2px solid white;
+  background-color:var(--color-2);
+  margin:20px 0 20px 0;
+  position:absolute;
+  left: 32%; 
+  z-index: 4;
+  transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+}
+button:hover{
+  background-color: white;
+  border:2px solid transparent;
+  cursor: pointer;
+}
+
+.reservation{
+  position: absolute;
+  left:50%;
 }
 body{
-    background-image:url(pexels-mark-stebnicki-2255920.jpg) ;
-    background-size:cover;
-    background-repeat:no-repeat;
-    background-position:center;
-    height:70%;
-    width:90%;
-}
-
-header{
-    font-family:sans-serif;
-    font-style: bold;
-}
-
-.about{
-    padding: 30px;
-
-}
-nav{
-    height: 80%;
-    width: 70%;
-    text-align: center;
-    display:flex;
-    border-radius: 100px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 200px;
-    font-size: 13px;
-}
-nav{
-    background-color: darkgrey;
-    height:50%;
-    width:90%;
-    padding:10px;
-    
-}
-#location{
-    background-color: burlywood;
-    height:80px;
-    padding:20px;
-    border-radius: 100px;
-}
-.top1{
-    background-color: burlywood;
-    display:flex;
-    justify-content:space-around;
-    height:60px;
-    padding-top: 10px;
-    text-decoration: none;
-    width:100%;
-    border-radius: 100px;
-
-}
-.about-us{
-    background-color: seagreen;
-    border-radius: 100px;
-    padding-top:10px;
-    padding-bottom: 10px;
-    padding-left: 0px;
-    padding-right: 0px;
-    position:absolute;
-    top:250px;
-
-
-}
-.top2{
-    background-color: burlywood;
-    height:60px;
-    display:flex;
-    justify-content: space-around;
-    padding-left:20px;
-    padding-right:20px;
-    font-family:'Times New Roman', Times, serif ;
-    font-weight: bold;
-    font-size:20px;
-    border-radius: 100px;
-    padding-bottom: 10px;
-    padding-left:5px;
-    padding-right: 5px;
-}
-
-.fa-facebook{
-    color:blue;
-}
-#contact3{
-    font-size:40px;
-    display:inline-block;
-    overflow:hidden;
-    text-decoration: none;    
-}      
-#contact1{
-    text-decoration: none;
-}
-#contact2{
-    font-size:40px;
-    color:white;
-    text-decoration: none;
-
-}
-#contact4{
-    font-size:40px;
-    color:lightblue;
-    text-decoration: none;
+  background-color: var(--color-2);
 }
