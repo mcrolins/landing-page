@@ -4,12 +4,13 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  
 }
 :root{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --color-1:burlywood;
     --color-2:seagreen;
-    --color-3:darkgrey; 
+    --color-3:#cce6cc; 
 }
 
 .main{
@@ -24,7 +25,7 @@
 }
 
 .menu-bar{
-   background-color: var(--color-1);
+   background-color: var(--color-3);
    display:flex;
    flex-direction: row;
    align-items:center;
@@ -33,6 +34,8 @@
    padding: 20px;
    z-index: 1;
    margin-right: 0;
+   position: fixed;
+   z-index: 5;
    
 }
 
@@ -48,6 +51,8 @@
   position: absolute;
   bottom:150px;
   box-shadow: black;
+  opacity: 85%;
+  color:white;
 }
 
 nav{
@@ -68,6 +73,9 @@ nav{
   margin-right: 5px;
   width: fit-content;
   transition: transform 0.3s ease-in-out;
+  display: grid;
+  grid-template-columns: repeat(4);
+  gap: 10px;
 }
 .about:hover{
 transform: scale(1.08);
@@ -82,7 +90,7 @@ transform: scale(1.08);
 }
 
 .socials-bar{
-  background-color: var(--color-1);
+  background-color: var(--color-3);
   padding: 20px;
   display:flex;
   flex-direction: row;
@@ -92,6 +100,8 @@ transform: scale(1.08);
 }
 span{
   font-size: larger;
+  
+  
 }
 
 button{
@@ -116,5 +126,10 @@ button:hover{
   left:50%;
 }
 body{
-  background-color: var(--color-2);
+  background-color: var(--color-3);
+}
+.reason-1{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
