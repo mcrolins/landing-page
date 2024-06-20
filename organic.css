@@ -13,8 +13,7 @@
     --color-3:#cce6cc; 
 }
 
-.main{
-  background-image:url(pexels-mark-stebnicki-2255920.jpg) ;
+.main {
   background-size:cover;
   background-repeat:no-repeat;
   background-position:center;
@@ -22,6 +21,9 @@
   align-items: center;
   flex-direction: column;
   height: 100vh;
+  background-image: url('pexels-mark-stebnicki-2255920.jpg');
+  width:100%;
+  transition: ease-in-out 0.2s;
 }
 
 .menu-bar{
@@ -53,6 +55,7 @@
   box-shadow: black;
   opacity: 85%;
   color:white;
+  
 }
 
 nav{
@@ -144,3 +147,22 @@ body{
   flex-direction: column;
   padding: 20px;
 }
+.next-button{
+  width: 10;
+  height: 10;
+  border-top: 10px solid white; /* Adjust thickness as needed */
+  border-bottom: 10px solid white; /* Adjust thickness as needed */
+  border-left: 15px solid black; /* Adjust size and color as needed */
+  background-color: var(--color-2);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding: 10px;
+  position: absolute;
+  left: 95%;
+  bottom: 30%;
+  opacity: 100%;
+}
+
+.next-button:hover {
+  background-color: white; /* Adjust hover color as needed */
+}  
