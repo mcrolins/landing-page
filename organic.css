@@ -46,7 +46,7 @@
   padding: 20px; 
   margin: 20px 5px 20px 5px; 
   z-index:3;
-  height:40%;
+  height:auto(40%);
   width:100%;
   display: flex;
   align-items: center;
@@ -55,7 +55,7 @@
   box-shadow: black;
   opacity: 85%;
   color:white;
-  
+  flex-wrap: wrap;
 }
 
 nav{
