@@ -40,6 +40,12 @@
    z-index: 5;
    
 }
+@media (max-width: 480px){
+  .menu-bar{
+width: fit-content;
+  }
+
+}
 
 .about-us{
   background-color: var(--color-2);
@@ -56,6 +62,8 @@
   opacity: 85%;
   color:white;
   flex-wrap: wrap;
+  
+  
 }
 
 nav{
@@ -93,14 +101,22 @@ transform: scale(1.08);
 }
 
 .socials-bar{
-  background-color: var(--color-3);
   padding: 20px;
   display:flex;
   flex-direction: row;
   align-items:center;
   justify-content: space-between;
   width:100%;
+  border-bottom: solid 2px white;
 }
+.socials-bar p {
+  font-size: small;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 5px;
+}
+
 span{
   font-size: larger;
   
@@ -166,3 +182,45 @@ body{
 .next-button:hover {
   background-color: white; /* Adjust hover color as needed */
 }  
+.fa-facebook, .fa-linkedin, .fa-instagram, .fa-twitter{
+  text-decoration: none;
+  color: white;
+}
+
+.ending{
+  background-color: var(--color-2);
+  
+}
+footer{
+  color: white;
+  padding: 20px;
+}
+.middle{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-around;
+  padding: 10px;
+  color: white;
+  border-bottom: 2px solid white;
+  padding: 20px;
+}
+.middle a{
+  text-decoration: wavy;
+  color: white;
+}
+.middle a:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+.middle a::after{
+  color: black;
+}
+.footer a{
+  text-decoration: none;
+  color:white;
+}
+header{
+  font-size: 30px;
+  font-weight: bold;
+}
