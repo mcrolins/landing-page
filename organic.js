@@ -1,226 +1,58 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+const main = document.querySelector('.main')
+const aboutUs = document.querySelector('.about-us');
+const imageAndText = [
+{text:`<ul>
+  <h1><span>O</span>rganic <span>D</span>ines</h1>
+  <h1 class = "headlines"><span>F</span>eel <span>B</span>etter <span>T</span>omorrow <span>E</span>at <span>H</span>ealthy <span>T</span>oday</h1>
+  Hello, looking for well prepared healthy meals?
+<p>Welcome to  Organic dines where we serve healthy food fresh from the farm.
+</p>
+<p>Check out our menu by clicking the Order Now below.</p>
+<p>You can also make table reservations by clicking the reservation button</p>
+<button class="next-button">next</button>
+<button class="order-now">Order Now</button>
+<button class="reservation">Make a reservation</button>
+</ul>`, image:'pexels-mark-stebnicki-2255920.jpg'},
+{text:`<ul><header>Discover the Essence of Organic Dining</header>
+    <p>At Organic Dines, we're passionate about transforming your dining experience. Our commitment to sustainability and the environment shines through in every dish we serve. Here's what sets us apart:
+
+    </p>
+    <button class="next-button">next</button>
+<button class="order-now">Order Now</button>
+<button class="reservation">Make a reservation</button>
+    </ul>`, image:'Food-Thought-2-2048x1366-1367976532.jpg'},
+{text:`<ul> <header> A Farm to Table Journey</header>
+    <p>We believe that great food starts with exceptional ingredients. Our culinary team works closely with local farmers and suppliers to bring you the finest organic produce, meats, and dairy. Our commitment to sustainable sourcing not only ensures you enjoy the best flavors but also supports our local community.
+    </p>
+    <button class="next-button">next</button>
+<button class="order-now">Order Now</button>
+<button class="reservation">Make a reservation</button>` , image:'seedling.jpg'},
+
+    {text:`<ul><header>The Organic Difference</header>
+    <p> Our menu is a celebration of pure, unadulterated flavors. Say goodbye to artificial additives, pesticides, and GMOs. Every bite at Organic Dines is a testament to the natural beauty of real food, prepared with love and care.</p> <button class="next-button">next</button>
+<button class="order-now">Order Now</button>
+<button class="reservation">Make a reservation</button>`, image:'sunflowers.jpg'},
+    {text:`<ul>
+    <header>Artistry on a Plate</header>
+    <p>Prepare to be dazzled by our chef's artistry. Each dish is a masterpiece that harmoniously blends flavors, colors, and textures. From vibrant salads to mouthwatering entrees and delectable desserts, our menu showcases the versatility of organic ingredients.
+<button class="next-button">next</button>
+<button class="order-now">Order Now</button>
+<button class="reservation">Make a reservation</button>
+    </p>
+    </ul>`, image:'whole foods.jpg'},
+];
+
+
+let currentIndex = 0;
+const nextButton = document.querySelector('.next-button');
+
+aboutUs.addEventListener("click", function(event) {
+  if (event.target.classList.contains('next-button')) {
+  currentIndex = (currentIndex + 1) % imageAndText.length;
+  const {image, text} = imageAndText[currentIndex];
+  main.style.backgroundImage = `url(${image})`;
+  aboutUs.innerHTML = text;
   
-}
-:root{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    --color-1:burlywood;
-    --color-2:seagreen;
-    --color-3:#cce6cc; 
-}
 
-.main {
-  background-size:cover;
-  background-repeat:no-repeat;
-  background-position:center;
-  display:flex;
-  align-items: center;
-  flex-direction: column;
-  height: 100vh;
-  background-image: url('pexels-mark-stebnicki-2255920.jpg');
-  width:100%;
-  transition: ease-in-out 0.2s;
-}
-
-.menu-bar{
-   background-color: var(--color-3);
-   display:flex;
-   flex-direction: row;
-   align-items:center;
-   justify-content: space-between;
-   width:100%;
-   padding: 20px;
-   z-index: 1;
-   margin-right: 0;
-   position: fixed;
-   z-index: 5;
-   
-}
-@media (max-width: 480px){
-  .menu-bar{
-width: fit-content;
   }
-
-}
-
-.about-us{
-  background-color: var(--color-2);
-  padding: 20px; 
-  margin: 20px 5px 20px 5px; 
-  z-index:3;
-  height:auto(40%);
-  width:100%;
-  display: flex;
-  align-items: center;
-  position: absolute;
-  bottom:150px;
-  box-shadow: black;
-  opacity: 85%;
-  color:white;
-  flex-wrap: wrap;
-  
-  
-}
-
-nav{
-  display: flex;
-  flex-direction: row;
-  background-color: transparent;
-  padding:20px 5px 20px 5px;
-  width:100%;
-  flex-wrap:nowrap;
-  
-  
-}
-.about{
-  background-color: var(--color-3);
-  box-shadow:5px 5px 10px rgba(0, 0, 0, 0.3);
-  padding: 5px;
-  border-radius: 15px;
-  margin-right: 5px;
-  width: fit-content;
-  transition: transform 0.3s ease-in-out;
-  display: grid;
-  grid-template-columns: repeat(4);
-  gap: 10px;
-}
-.about:hover{
-transform: scale(1.08);
-}
-
-.location{
-  background-color: var(--color-2);
-  padding: 20px;
-  border-radius: 15px;
-  margin:20px 5px 10px 20px;
-  ;
-}
-
-.socials-bar{
-  padding: 20px;
-  display:flex;
-  flex-direction: row;
-  align-items:center;
-  justify-content: space-between;
-  width:100%;
-  border-bottom: solid 2px white;
-}
-.socials-bar p {
-  font-size: small;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-left: 5px;
-}
-
-span{
-  font-size: larger;
-  
-  
-}
-
-button{
-  border-radius: 30px;
-  padding: 20px;
-  border: 2px solid white;
-  background-color:var(--color-2);
-  margin:20px 0 20px 0;
-  position:absolute;
-  left: 32%; 
-  z-index: 4;
-  transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
-}
-button:hover{
-  background-color: white;
-  border:2px solid transparent;
-  cursor: pointer;
-}
-
-.reservation{
-  position: absolute;
-  left:50%;
-}
-body{
-  background-color: var(--color-3);
-}
-.reason-1{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-.icons{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  padding: 30px;
-}
-.icon{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding: 20px;
-}
-.next-button{
-  width: 10;
-  height: 10;
-  border-top: 10px solid white; /* Adjust thickness as needed */
-  border-bottom: 10px solid white; /* Adjust thickness as needed */
-  border-left: 15px solid black; /* Adjust size and color as needed */
-  background-color: var(--color-2);
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  padding: 10px;
-  position: absolute;
-  left: 95%;
-  bottom: 30%;
-  opacity: 100%;
-}
-
-.next-button:hover {
-  background-color: white; /* Adjust hover color as needed */
-}  
-.fa-facebook, .fa-linkedin, .fa-instagram, .fa-twitter{
-  text-decoration: none;
-  color: white;
-}
-
-.ending{
-  background-color: var(--color-2);
-  
-}
-footer{
-  color: white;
-  padding: 20px;
-}
-.middle{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content:space-around;
-  padding: 10px;
-  color: white;
-  border-bottom: 2px solid white;
-  padding: 20px;
-}
-.middle a{
-  text-decoration: wavy;
-  color: white;
-}
-.middle a:hover{
-  text-decoration: underline;
-  cursor: pointer;
-}
-.middle a::after{
-  color: black;
-}
-.footer a{
-  text-decoration: none;
-  color:white;
-}
-header{
-  font-size: 30px;
-  font-weight: bold;
-}
+});
