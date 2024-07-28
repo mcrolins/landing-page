@@ -56,3 +56,9 @@ aboutUs.addEventListener("click", function(event) {
 
   }
 });
+function goToMenu() {
+    window.location.href = 'dessert.html'
+}
+window.onload = function () {
+    document.querySelector(".order-now").addEventListener('click', goToMenu)
+}
